@@ -74,7 +74,7 @@ const Nav = () => {
         </div>
 
         {/* Mobile Navigation */}
-        <div classname="sm:hidden flex relative">
+        <div className="sm:hidden flex relative">
             {isUserLoggedIn ? (
                 <div className="flex">
                     <Image
@@ -87,7 +87,7 @@ const Nav = () => {
                     />
 
                     {toggleDropdown && (
-                        <div classname="dropdown">
+                        <div className="dropdown">
                             <Link
                             href="/profile"
                             className='dropdown_link'
