@@ -11,7 +11,7 @@ const Nav = () => {
     const [toggleDropdown, setToggleDropdown] = useState(false);
 
     useEffect(() => {
-        const setProviders = async () => {
+        async () => {
             const response = await getProviders();
 
             setProviders(response);
@@ -28,7 +28,7 @@ const Nav = () => {
                 alt="Promptopia Logo"
                 width={30}
                 height={30}
-                className="Object-contain"
+                className="object-contain"
             />
             <p className="logo_text">Promptopia</p>
         </Link>
@@ -42,28 +42,28 @@ const Nav = () => {
                         Create Post
                     </Link>
 
-            <button type="button" onClick={signOut}
-            className="outline_btn">
-                Sign Out
-            </button>
+                    <button type="button" onClick={signOut}
+                    className="outline_btn">
+                        Sign Out
+                    </button>
 
-            <Link href="/profile">
-            <Image
-                src="/assets/images/logo.svg"
-                width={37}
-                height={37}
-                className="rounded-full"
-                alt="profile"
-            />
-            </Link>
-        </div>
+                    <Link href="/profile">
+                        <Image
+                            src="/assets/images/logo.svg"
+                            width={37}
+                            height={37}
+                            className="rounded-full"
+                            alt="profile"
+                        />
+                    </Link>
+                </div>
             ): (
                 <>
                 {providers && Object.values(providers).map((provider) => (
                     <button
                     type="button"
                     key={provider.name}
-                    onClick={() => signedIn=(provider.id)}
+                    onClick={() => {signedIn=(provider.id)}}
                     className="black_btn"
                     >
                      Sign In   
